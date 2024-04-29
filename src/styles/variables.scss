@@ -6,26 +6,29 @@ $color-primary-teal: #4793af;
 $color-secondary-orange: #dd5746;
 $color-tan: #ffc470;
 $color-red-orange: #8b322c;
-$color-dark: #0c0c0c;
+$color-dark: #0d1f39;
 $color-light: #f9f9f9;
 
+// radius
+$radius-xxs: 5px;
+
 // Spacing
+$spacing-xxs: 5px;
 $spacing-sm: 1rem;
 $spacing-md: 2rem;
 $spacing-lg: 3rem;
 
 // Fonts
-$font-cabin: "Cabin";
-$font-DM: "DM Serif Display";
+$font-quicksand: "Quicksand";
 
 // Font Sizes
 $font-size-xs: 0.8rem;
 $font-size-sm: 1rem;
-$font-size-md: 1.5rem;
+$font-size-md: 1.4rem;
 $font-size-lg: 2rem;
 
 // Letter Spacing
-$letter-space-xs: 3px;
+$letter-space-xs: 2px;
 
 // Mixins
 @mixin flex-center-column {
@@ -38,6 +41,6 @@ $letter-space-xs: 3px;
 @mixin flex-row-evenly {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }

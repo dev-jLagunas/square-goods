@@ -1,0 +1,117 @@
+/**********************************************************************
+Import Variables
+**********************************************************************/
+@import "../../styles/variables.scss";
+
+/************************************************************
+Component Styles - Mobile First
+************************************************************/
+.component-container {
+  @include flex-center-column;
+
+  .store-header-wrapper {
+    @include flex-center-column;
+
+    .store-logo {
+      height: 200px;
+    }
+
+    .store-tagline {
+      color: $color-dark;
+      text-align: center;
+      padding-inline: 10px;
+      margin-bottom: $spacing-sm;
+      font-family: $font-quicksand;
+      font-size: $font-size-sm;
+      letter-spacing: $letter-space-xs;
+    }
+  }
+}
+
+.nav-links-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: $spacing-sm;
+  width: 100%;
+  margin-bottom: $spacing-sm;
+  background-color: $color-primary-teal;
+  padding-block: $spacing-xxs;
+
+  .navlink {
+    position: relative;
+    font-size: $font-size-xs;
+    letter-spacing: $letter-space-xs;
+    color: $color-light;
+  }
+
+  .navlink:last-child {
+    grid-column: span 5;
+
+    .fa-user {
+      padding-right: $spacing-xxs;
+    }
+  }
+}
+
+.search-cart-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: $spacing-sm;
+  margin-top: $spacing-sm;
+
+  .search-form {
+    .search-input {
+      border: 1px solid $color-primary-teal;
+      padding: $spacing-xxs;
+      border-top-left-radius: $radius-xxs;
+      border-bottom-left-radius: $radius-xxs;
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary-teal;
+      }
+    }
+
+    .search-btn {
+      background-color: $color-primary-teal;
+      color: $color-light;
+      border: 0;
+      padding: 6px;
+      border-top-right-radius: $radius-xxs;
+      border-bottom-right-radius: $radius-xxs;
+    }
+  }
+
+  .cart-btn {
+    border: 0;
+    border-radius: $radius-xxs;
+    padding: 6px;
+    background: $color-secondary-orange;
+    color: $color-light;
+    font-size: $font-size-sm;
+  }
+}
+
+/************************************************************
+Component Styles - Tablet - 768px
+************************************************************/
+@media (min-width: 768px) {
+  .nav-links-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+
+    .navlink:last-child {
+      grid-column: span 1;
+
+      .fa-user {
+        padding-right: $spacing-xxs;
+      }
+    }
+  }
+  .search-cart-wrapper {
+    width: 60%;
+  }
+}

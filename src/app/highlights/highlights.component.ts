@@ -14,11 +14,11 @@ interface Highlight {
 })
 export class HighlightsComponent {
   highlights: Highlight[] = [
-    { img: 'assets/highlights/organic.png', caption: 'ORGANIC' },
-    { img: 'assets/highlights/substainable.png', caption: 'SUBSTAINABLE' },
-    { img: 'assets/highlights/cheap.png', caption: 'CHEAP' },
-    { img: 'assets/highlights/durable.png', caption: 'DURABLE' },
-    { img: 'assets/highlights/cool.png', caption: 'COOL' },
+    { img: 'assets/highlights/organic.png', caption: 'Organic' },
+    { img: 'assets/highlights/substainable.png', caption: 'Substainable' },
+    { img: 'assets/highlights/cheap.png', caption: 'Cheap' },
+    { img: 'assets/highlights/durable.png', caption: 'Durable' },
+    { img: 'assets/highlights/cool.png', caption: 'Cool' },
   ];
 
   constructor() {}

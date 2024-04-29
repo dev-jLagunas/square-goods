@@ -1,0 +1,43 @@
+/************************************************************
+Project Variables
+************************************************************/
+// Colors
+$color-primary-teal: #4793af;
+$color-secondary-orange: #dd5746;
+$color-tan: #ffc470;
+$color-red-orange: #8b322c;
+$color-dark: #0c0c0c;
+$color-light: #f9f9f9;
+
+// Spacing
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 3rem;
+
+// Fonts
+$font-cabin: "Cabin";
+$font-DM: "DM Serif Display";
+
+// Font Sizes
+$font-size-xs: 0.8rem;
+$font-size-sm: 1rem;
+$font-size-md: 1.5rem;
+$font-size-lg: 2rem;
+
+// Letter Spacing
+$letter-space-xs: 3px;
+
+// Mixins
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row-evenly {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

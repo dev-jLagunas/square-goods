@@ -1,1 +1,12 @@
-<p>highlights works!</p>
+<section class="component-container">
+  <div class="highlights-wrapper">
+    @for (highlight of highlights; track $index) {
+    <figure class="flaticon-wrapper">
+      <img [src]="highlight.img" alt="highlights png" class="flaticon" />
+      <figcaption class="flaticon-caption">
+        {{ highlight.caption }}
+      </figcaption>
+    </figure>
+    }
+  </div>
+</section>

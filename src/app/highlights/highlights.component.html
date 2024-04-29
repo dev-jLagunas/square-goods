@@ -2,7 +2,11 @@
   <div class="highlights-wrapper">
     @for (highlight of highlights; track $index) {
     <figure class="flaticon-wrapper">
-      <img [src]="highlight.img" alt="highlights png" class="flaticon" />
+      <img
+        [src]="highlight.img"
+        alt="img of store highlights"
+        class="flaticon"
+      />
       <figcaption class="flaticon-caption">
         {{ highlight.caption }}
       </figcaption>

@@ -1,5 +1,4 @@
-import { NgFor } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 interface Highlight {
   img: string;
@@ -9,11 +8,11 @@ interface Highlight {
 @Component({
   selector: 'app-highlights',
   standalone: true,
-  imports: [NgFor],
+  imports: [],
   templateUrl: './highlights.component.html',
   styleUrl: './highlights.component.scss',
 })
-export class HighlightsComponent implements OnInit {
+export class HighlightsComponent {
   highlights: Highlight[] = [
     { img: 'assets/highlights/organic.png', caption: 'ORGANIC' },
     { img: 'assets/highlights/substainable.png', caption: 'SUBSTAINABLE' },
@@ -23,6 +22,4 @@ export class HighlightsComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit() {}
 }

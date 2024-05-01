@@ -1,0 +1,126 @@
+/**********************************************************************
+Import Variables
+**********************************************************************/
+@import "../../styles/variables.scss";
+
+/************************************************************
+Component Styles - Shared Styles
+************************************************************/
+.figure-wrapper {
+  width: max-content;
+  position: relative;
+  width: 100%;
+}
+
+.figure-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.see-more-btn {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: $color-light;
+  background-color: $color-primary-teal;
+  border: 0;
+  padding-block: 10px;
+  font-size: $font-size-xs;
+  letter-spacing: $letter-space-xs;
+  font-weight: 700;
+
+  &:hover {
+    letter-spacing: 4px;
+    transition: 1s all ease-in-out;
+    cursor: pointer;
+  }
+}
+
+.goods-logo {
+  height: 75px;
+  width: 75px;
+}
+
+/************************************************************
+Component Styles - Mobile First
+************************************************************/
+.component-container {
+  height: max-content;
+  margin-top: $spacing-md;
+  margin-inline: auto;
+}
+
+.hero-container {
+  height: max-content;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-tagline-wrapper {
+  @include flex-center-column;
+
+  .hero-tagline {
+    padding-inline: $spacing-sm;
+    font-family: $font-quicksand;
+    text-align: center;
+    font-size: $font-size-md;
+    color: $color-dark;
+  }
+
+  .tagline-btn {
+    background-color: $color-primary-teal;
+    color: $color-light;
+    padding: $spacing-xxs;
+    border: 0;
+    font-weight: 700;
+    letter-spacing: $letter-space-xs;
+    border-radius: $radius-xxs;
+    margin-block: $spacing-md;
+  }
+}
+
+/************************************************************
+Component Styles - Tablet - 768px
+************************************************************/
+@media (min-width: 768px) {
+  .figure-wrapper {
+    height: 100%;
+  }
+  .hero-container {
+    margin-inline: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "item1 item2 item4 item3"
+      "item6 item5 item7 item8";
+
+    .item1 {
+      grid-area: item1;
+    }
+    .item2 {
+      grid-area: item2;
+    }
+    .item3 {
+      grid-area: item3;
+    }
+    .item4 {
+      grid-area: item4;
+    }
+    .item5 {
+      grid-area: item5;
+    }
+    .item6 {
+      grid-area: item6;
+    }
+    .item7 {
+      grid-area: item7;
+    }
+    .item8 {
+      grid-area: item8;
+    }
+  }
+}

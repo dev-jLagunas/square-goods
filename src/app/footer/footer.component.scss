@@ -1,0 +1,117 @@
+/**********************************************************************
+Import Variables
+**********************************************************************/
+@import "../../styles/variables.scss";
+
+/************************************************************
+Component Styles - Shared Styles
+************************************************************/
+.nav-link,
+.info-link,
+.sns-link {
+  color: $color-dark;
+
+  &:hover {
+    scale: 1.2;
+    transition: 100ms all ease-out;
+    cursor: pointer;
+  }
+}
+
+.nav-links-wrapper,
+.info-links-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: $spacing-xs;
+  padding-left: $spacing-md;
+}
+
+.character-logo {
+  height: 100px;
+}
+/************************************************************
+Component Styles - Mobile First
+************************************************************/
+.footer-container {
+  height: max-content;
+}
+
+.footer-header-wrapper {
+  background-color: $color-primary-teal;
+  @include flex-center-column;
+  color: $color-light;
+  height: max-content;
+  gap: $spacing-xxs;
+  .footer-logo {
+    height: 150px;
+  }
+}
+
+.footer-links-wrapper {
+  margin-top: $spacing-sm;
+
+  .info-links-wrapper {
+    padding-block: $spacing-xs;
+  }
+
+  .sns-link-wrapper {
+    display: flex;
+    margin-block: $spacing-xs;
+    gap: $spacing-xs;
+    padding-left: $spacing-md;
+  }
+}
+
+.copyright-wrapper {
+  background-color: $color-primary-teal;
+  padding-block: $spacing-sm;
+  padding-inline: $spacing-xs;
+  color: $color-light;
+  font-size: $font-size-xs;
+
+  .copyright {
+    text-align: center;
+  }
+}
+
+/************************************************************
+Component Styles - Tablet - From 768px
+************************************************************/
+@media (min-width: 768px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-header-wrapper {
+    border-top-right-radius: 5%;
+
+    .footer-logo {
+      border: 4px double $color-light;
+      margin-block: $spacing-sm;
+    }
+  }
+
+  .footer-links-wrapper {
+    display: grid;
+    margin-top: 0;
+    grid-template-columns: repeat(2, 1fr);
+    border: 5px solid $color-primary-teal;
+    border-top-left-radius: 5%;
+    padding-top: $spacing-md;
+    align-items: center;
+    justify-items: start;
+
+    .sns-link-wrapper {
+      grid-column: span 2;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .copyright-wrapper {
+    grid-column: span 2;
+  }
+}

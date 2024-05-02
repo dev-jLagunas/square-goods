@@ -44,6 +44,10 @@ Component Styles - Mobile First
     font-size: $font-size-xs;
     letter-spacing: $letter-space-xs;
     color: $color-light;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .navlink:last-child {

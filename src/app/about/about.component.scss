@@ -4,9 +4,6 @@ Import Variables
 @import "../../styles/variables.scss";
 
 /************************************************************
-Component Styles - Shared Styles
-************************************************************/
-/************************************************************
 Component Styles - Mobile First
 ************************************************************/
 .about-header-wrapper {
@@ -156,6 +153,7 @@ Component Styles - Mobile First
     padding: $spacing-xs;
     letter-spacing: $letter-space-xs;
     border-radius: $radius-xxs;
+    cursor: pointer;
   }
 }
 

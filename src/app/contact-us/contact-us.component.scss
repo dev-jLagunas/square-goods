@@ -1,0 +1,66 @@
+/**********************************************************************
+Import Variables
+**********************************************************************/
+@import "../../styles/variables.scss";
+
+/************************************************************
+Component Styles - Mobile First
+************************************************************/
+.contact-container {
+  @include flex-center-column;
+
+  .character-logo {
+    height: 300px;
+  }
+}
+
+.contact-header-wrapper {
+  @include flex-center-column;
+  margin-top: -5rem;
+  color: $color-dark;
+  gap: 5px;
+}
+
+.contact-boxes-wrapper {
+  margin-block: $spacing-lg;
+  @include flex-center-column;
+  gap: $spacing-sm;
+
+  .contact-box {
+    background-color: $color-primary-teal;
+    border-radius: $radius-xxs;
+    @include flex-center-column;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    color: $color-light;
+
+    .contact-icon {
+      color: $color-secondary-orange;
+      font-size: $font-size-lg;
+    }
+
+    .box-info {
+      font-size: $font-size-md;
+    }
+
+    .box-btn {
+      padding: $spacing-xs;
+      border: none;
+      border-radius: $radius-xxs;
+      margin-top: $spacing-sm;
+      color: $color-dark;
+      letter-spacing: $letter-space-xs;
+      cursor: pointer;
+    }
+  }
+}
+
+/************************************************************
+Component Styles - Tablet - from 768px
+************************************************************/
+@media (min-width: 768px) {
+  .contact-boxes-wrapper {
+    @include flex-row-evenly;
+  }
+}
